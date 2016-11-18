@@ -1,7 +1,8 @@
 create TABLE userInfo (
-	username char(16) NOT NULL, 
-	pass char(64), 
-	salt char(64),
-	grp char(10), 
-	primary key(username)
+	username varchar(16) NOT NULL, 
+	pass char(64) NOT NULL, 
+	salt char(64) NOT NULL,
+	customerID int NOT NULL AUTO_INCREMENT,
+    UNIQUE (username),
+	primary key(customerID)
 );
